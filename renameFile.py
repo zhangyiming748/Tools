@@ -7,6 +7,8 @@ import os
 
 def getFilesName(path):
     fileList = os.listdir(path)
+    count = len(fileList)
+    print("共有%d个文件"%count)
     return fileList
 
 
@@ -34,9 +36,11 @@ def replace(oldName):  # 【上午】
 
 
 if __name__ == '__main__':
-    path = '/Volumes/Samsung/text/'
+    path = '/Volumes/Samsung/ts/'
     names = getFilesName(path=path)
+    count=0
     for name in names:
+        count+=1
         print('获得的旧文件名 %s' % name)
         print(type(name))
         new = replace(name)
@@ -44,3 +48,5 @@ if __name__ == '__main__':
         print(type(new))
         # os.rename(name,new)
         os.rename(os.path.join(path, name), os.path.join(path, new))
+        print("正在处理第 %d 个文件"%count)
+# 有时间尝试 try catch
