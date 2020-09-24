@@ -15,13 +15,73 @@ echo 停用华为音乐视频
 adb shell pm disable-user com.android.mediacenter
 echo 清除华为浏览器缓存
 adb shell pm clear com.huawei.browser
-echo 清除华为浏览器缓存
+echo 停用华为浏览器
 adb shell pm disable-user com.huawei.browser
 echo 清除华为阅读缓存
 adb shell pm clear com.huawei.hwireader
-echo 清除华为阅读缓存
+echo 停用华为阅读
 adb shell pm disable-user com.huawei.hwireader
 echo 清除华为主题缓存
 adb shell pm clear com.huawei.android.thememanager
-echo 清除华为主题缓存
+echo 停用华为主题
 adb shell pm disable-user com.huawei.android.thememanager
+echo 清除精品推荐缓存
+adb shell pm clear com.huawei.hifolder
+echo 停用精品推荐
+adb shell pm disable-user com.huawei.hifolder
+echo 清除杂志锁屏缓存
+adb shell pm clear com.android.keyguard
+echo 停用杂志锁屏
+adb shell pm disable-user com.android.keyguard
+# echo 清除缓存
+# adb shell pm clear 
+# echo 停用
+# adb shell pm disable-user 
+# echo 清除缓存
+# adb shell pm clear 
+# echo 停用
+# adb shell pm disable-user 
+# echo 清除缓存
+# adb shell pm clear 
+# echo 停用
+# adb shell pm disable-user 
+# echo 清除缓存
+# adb shell pm clear 
+# echo 停用
+# adb shell pm disable-user 
+# echo 清除缓存
+# adb shell pm clear 
+# echo 停用
+# adb shell pm disable-user 
+# echo 清除缓存
+# adb shell pm clear 
+# echo 停用
+# adb shell pm disable-user 
+# echo 清除缓存
+# adb shell pm clear 
+# echo 停用
+# adb shell pm disable-user 
+# echo 清除缓存
+# adb shell pm clear 
+# echo 停用
+# adb shell pm disable-user 
+# echo 清除缓存
+# adb shell pm clear 
+# echo 停用
+# adb shell pm disable-user 
+# echo 清除缓存
+# adb shell pm clear 
+# echo 停用
+# adb shell pm disable-user 
+# echo 清除缓存
+# adb shell pm clear 
+# echo 停用
+# adb shell pm disable-user 
+# echo 清除缓存
+# adb shell pm clear 
+# echo 停用
+# adb shell pm disable-user 
+echo 清除缓存
+adb shell pm clear com.iflytek.speechsuite
+echo 停用
+adb shell pm disable-user com.iflytek.speechsuite 
