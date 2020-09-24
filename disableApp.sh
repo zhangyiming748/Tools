@@ -9,3 +9,7 @@ adb shell pm disable-user com.huawei.himovie
 adb shell pm disable-user com.android.mediacenter
 # 停用华为浏览器
 adb shell pm disable-user com.huawei.browser
+# 华为阅读
+adb shell pm disable-user com.huawei.hwireader
+# 华为主题
+adb shell pm disable-user com.huawei.android.thememanager
