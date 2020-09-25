@@ -1,6 +1,6 @@
 # 转换目录下多个子文件夹
 import os
-
+import time
 
 def getFolders(dir):
     path = os.listdir(dir)
@@ -31,12 +31,14 @@ def getFiles(subfolder):
 
 def webp2jpg(files):
     for file in files:
+        print('ffmpeg输入的文件是 %s'%file)
         ext = file.split('.')
         if ext[-1] == 'webp':
             print(file + " :is a webp file")
             prefix = 'ffmpeg -i '
             # file
-            suffix = ' ' + file + '.png'
+            thisTime=str(time.time())
+            suffix = ' ' + file + thisTime +'.png'
             command = prefix + file + suffix
             print("命令: %s" % command)
             os.system(command)
