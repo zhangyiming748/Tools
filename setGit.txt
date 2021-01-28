@@ -1,0 +1,12 @@
+git config --global user.name "Zen"
+git config --global user.email zhangyiming748@gmail.com
+
+ssh-keygen -t rsa -C "zhangyiming748@gmail.com"
+
+git config --global core.editor "/Applications/Sublime Text.app/Contents/MacOS/Sublime Text"
+
+git config --global core.editor emacs
+
+git config --global core.editor "/Applications/Sublime Text.app/Contents/MacOS/Sublime Text -n -w"
+
+git config --global core.editor "/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl -n -w"
