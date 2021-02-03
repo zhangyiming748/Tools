@@ -48,7 +48,7 @@ def get_dir(dir):
         # print(names)
         prefix = names[0]
         suffix = names[1]
-        if suffix != 'py':
+        if suffix == 'm3u' and len(prefix)>0:
             files.append(multi)
         else:
             print('跳过 %s 文件' % multi)
