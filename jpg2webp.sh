@@ -1,6 +1,11 @@
 #!/bin/bash
 # webp最大宽高不得超过16383像素
-for x in ls *.jpg
+#!/bin/bash
+# get all filename in specified path
+
+path=$1
+files=$(ls *.png $path)
+for filename in $files
 	do
-		cwebp $x -o ${x%.jpg}.webp
+		cwebp $filename -o ${filename%.png}.webp
 	done
