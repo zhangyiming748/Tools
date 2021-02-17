@@ -10,7 +10,7 @@ def get_dir(dictionary):
         # print(names)
         prefix = names[0]
         suffix = names[-1]
-        if suffix == 'mp4':
+        if suffix == 'mp4' and len(prefix) > 0:
             files.append(multi)
         else:
             print('跳过 %s 文件' % multi)
@@ -27,7 +27,7 @@ def rotateCommand(Source, Target, file):
     print("tag: ", absTarget)
     # ffmpeg -i $file -vf "transpose=1" $file".mp4"
     prefix = 'ffmpeg -i '
-    suffix = ' -vf "transpose=2" '
+    suffix = ' -vf "transpose=2"  -c copy '
     command = prefix + '\"' + absSource + '\"' + suffix + '\"' + absTarget + '\"'
     print("转换的命令: %s" % command)
     os.system(command)
