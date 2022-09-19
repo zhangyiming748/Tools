@@ -1,0 +1,1 @@
+find . -type f -name "*.sh" ! -name "execshell.sh" -exec  {} \;
