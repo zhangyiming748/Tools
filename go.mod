@@ -11,8 +11,9 @@ require (
 	github.com/schollz/progressbar/v3 v3.8.6
 	github.com/widuu/goini v0.0.0-20180603013956-56a38bd2e09b
 	github.com/yeka/zip v0.0.0-20180914125537-d046722c6feb
-	github.com/zhangyiming748/AVmerger v0.0.2
+	github.com/zhangyiming748/AVmerger v0.0.4
 	github.com/zhangyiming748/amr2mp3 v0.0.2
+	github.com/zhangyiming748/video2h265mp4 v0.0.4
 	github.com/zhangyiming748/youtube-dl-bat v0.0.1
 	golang.org/x/net v0.0.0-20211112202133-69e39bad7dc2
 )

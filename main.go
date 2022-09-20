@@ -13,9 +13,11 @@ import (
 	"Tools/util/conf"
 	util "Tools/util/file"
 	"Tools/util/log"
+	"Tools/util/threads"
 	"Tools/weather"
 	//"Tools/ytd"
 	"github.com/zhangyiming748/AVmerger/merge"
+	conv "github.com/zhangyiming748/video2h265mp4/convert"
 	"github.com/zhangyiming748/youtube-dl-bat/ytd"
 	"os"
 	"os/exec"
@@ -150,24 +152,24 @@ func main() {
 				}
 			}
 		}
-	case "ToH265":
-		log.Emergency.Println("fn")
-		for index, file := range files {
-			log.Debug.Printf("准备好进行转换的文件:%v", file)
-			convert.ToH265(src, dst, file, index, len(files))
-			if delDone == "true" {
-				log.Info.Printf("删除源文件:%s\n", file)
-				fp := strings.Join([]string{src, file}, "/")
-				if err := os.Remove(fp); err == nil {
-					log.Info.Printf("删除转换完成的文件\"%v\"成功\n", fp)
-				} else {
-					log.Warn.Printf("删除转换完成的文件\"%v\"发生错误\n", fp)
-				}
-			} else {
-				log.Info.Printf("保留源文件:%s\n", file)
-			}
-			runtime.GC()
-		}
+	//case "ToH265":
+	//	log.Emergency.Println("fn")
+	//	for index, file := range files {
+	//		log.Debug.Printf("准备好进行转换的文件:%v", file)
+	//		convert.ToH265(src, dst, file, index, len(files))
+	//		if delDone == "true" {
+	//			log.Info.Printf("删除源文件:%s\n", file)
+	//			fp := strings.Join([]string{src, file}, "/")
+	//			if err := os.Remove(fp); err == nil {
+	//				log.Info.Printf("删除转换完成的文件\"%v\"成功\n", fp)
+	//			} else {
+	//				log.Warn.Printf("删除转换完成的文件\"%v\"发生错误\n", fp)
+	//			}
+	//		} else {
+	//			log.Info.Printf("保留源文件:%s\n", file)
+	//		}
+	//		runtime.GC()
+	//	}
 	case "rotate":
 		if direct := conf.GetVal("rotate", "direction"); direct == "ToRight" {
 			for _, f := range files {
@@ -310,6 +312,8 @@ func main() {
 			log.Info.Println("没有选择视频类型")
 			return
 		}
+	case "ToH265":
+		conv.ConvertToH265(src, dst, pattern, threads.Threads())
 	//case "amr":
 	//	ConvertMP3(src, dst)
 	case "default":

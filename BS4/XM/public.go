@@ -43,6 +43,7 @@ func Replace(str string) string {
 	str = strings.Replace(str, ")", "", -1)
 	str = strings.Replace(str, " ", "", -1)
 	str = strings.Replace(str, "\u00A0", "", -1)
+	str = strings.Replace(str, "\u0000", "", -1)
 	return str
 }
 func GetTitle(s string) string {
