@@ -8,15 +8,14 @@ import (
 	"Tools/file/mediaInfo"
 	"Tools/getTime"
 	"Tools/net"
-	"Tools/rotateVideo"
 	"Tools/unzip"
 	"Tools/util/conf"
 	util "Tools/util/file"
 	"Tools/util/log"
 	"Tools/util/threads"
 	"Tools/weather"
-	//"Tools/ytd"
 	"github.com/zhangyiming748/AVmerger/merge"
+	"github.com/zhangyiming748/rotateVideo/rotate"
 	conv "github.com/zhangyiming748/video2h265mp4/convert"
 	"github.com/zhangyiming748/youtube-dl-bat/ytd"
 	"os"
@@ -170,34 +169,34 @@ func main() {
 	//		}
 	//		runtime.GC()
 	//	}
-	case "rotate":
-		if direct := conf.GetVal("rotate", "direction"); direct == "ToRight" {
-			for _, f := range files {
-				log.Debug.Printf("准备好进行转换的文件:%v", f)
-				rotateVideo.ToRight(src, dst, f)
-				if delDone == "true" {
-					s := strings.Join([]string{src, f}, "/")
-					if err := os.Remove(s); err == nil {
-						log.Info.Printf("删除转换完成的文件%v成功\n", s)
-					} else {
-						log.Warn.Printf("删除转换完成的文件%v发生错误\n", s)
-					}
-				}
-			}
-		} else {
-			for _, f := range files {
-				log.Debug.Printf("准备好进行转换的文件:%v", f)
-				rotateVideo.ToLeft(src, dst, f)
-				if delDone == "true" {
-					s := strings.Join([]string{src, f}, "/")
-					if err := os.Remove(s); err == nil {
-						log.Info.Printf("删除转换完成的文件%v成功\n", s)
-					} else {
-						log.Warn.Printf("删除转换完成的文件%v发生错误\n", s)
-					}
-				}
-			}
-		}
+	//case "rotate":
+	//	if direct := conf.GetVal("rotate", "direction"); direct == "ToRight" {
+	//		for _, f := range files {
+	//			log.Debug.Printf("准备好进行转换的文件:%v", f)
+	//			rotateVideo.ToRight(src, dst, f)
+	//			if delDone == "true" {
+	//				s := strings.Join([]string{src, f}, "/")
+	//				if err := os.Remove(s); err == nil {
+	//					log.Info.Printf("删除转换完成的文件%v成功\n", s)
+	//				} else {
+	//					log.Warn.Printf("删除转换完成的文件%v发生错误\n", s)
+	//				}
+	//			}
+	//		}
+	//	} else {
+	//		for _, f := range files {
+	//			log.Debug.Printf("准备好进行转换的文件:%v", f)
+	//			rotateVideo.ToLeft(src, dst, f)
+	//			if delDone == "true" {
+	//				s := strings.Join([]string{src, f}, "/")
+	//				if err := os.Remove(s); err == nil {
+	//					log.Info.Printf("删除转换完成的文件%v成功\n", s)
+	//				} else {
+	//					log.Warn.Printf("删除转换完成的文件%v发生错误\n", s)
+	//				}
+	//			}
+	//		}
+	//	}
 	case "ToWebp":
 		log.Info.Println("webp最大宽高不得超过16383像素")
 		for _, f := range files {
@@ -314,6 +313,9 @@ func main() {
 		}
 	case "ToH265":
 		conv.ConvertToH265(src, dst, pattern, threads.Threads())
+	case "Rotate":
+		direction := conf.GetVal("rotate", "direction")
+		rotate.Rotate(src, pattern, direction, dst, threads.Threads())
 	//case "amr":
 	//	ConvertMP3(src, dst)
 	case "default":
