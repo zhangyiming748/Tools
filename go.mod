@@ -14,7 +14,7 @@ require (
 	github.com/zhangyiming748/AVmerger v0.0.4
 	github.com/zhangyiming748/amr2mp3 v0.0.2
 	github.com/zhangyiming748/rotateVideo v0.0.3
-	github.com/zhangyiming748/video2h265mp4 v0.0.4
+	github.com/zhangyiming748/video2h265mp4 v0.0.6
 	github.com/zhangyiming748/youtube-dl-bat v0.0.1
 	golang.org/x/net v0.0.0-20211112202133-69e39bad7dc2
 )

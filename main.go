@@ -16,7 +16,7 @@ import (
 	"Tools/weather"
 	"github.com/zhangyiming748/AVmerger/merge"
 	"github.com/zhangyiming748/rotateVideo/rotate"
-	conv "github.com/zhangyiming748/video2h265mp4/convert"
+	conv "github.com/zhangyiming748/video2h265mp4"
 	"github.com/zhangyiming748/youtube-dl-bat/ytd"
 	"os"
 	"os/exec"
@@ -312,7 +312,7 @@ func main() {
 			return
 		}
 	case "ToH265":
-		conv.ConvertToH265(src, dst, pattern, threads.Threads())
+		conv.ConvToH265(src, dst, pattern, threads.Threads())
 	case "Rotate":
 		direction := conf.GetVal("rotate", "direction")
 		rotate.Rotate(src, pattern, direction, dst, threads.Threads())

@@ -58,6 +58,10 @@ github.com/zhangyiming748/rotateVideo v0.0.3 h1:5cp2ymwjoLYtattzGf82vwDfelPAlav7
 github.com/zhangyiming748/rotateVideo v0.0.3/go.mod h1:o+Esu5SCy4jW1c+1LT1MgnDsoe6/+9jpsPns84e2N7Y=
 github.com/zhangyiming748/video2h265mp4 v0.0.4 h1:OocpBVL1L1wtLF8j+VJBhQ6U3/CX1XEOEaGfjeD222o=
 github.com/zhangyiming748/video2h265mp4 v0.0.4/go.mod h1:SqAAbTPlUR9xvKNacFKyHZx6uc9xNpRc2f0I3uQ/Gxo=
+github.com/zhangyiming748/video2h265mp4 v0.0.5 h1:9YGN3mKX+NOR5cl8MBOTtrZs1GetaXbcc+DOsQz4lx0=
+github.com/zhangyiming748/video2h265mp4 v0.0.5/go.mod h1:SqAAbTPlUR9xvKNacFKyHZx6uc9xNpRc2f0I3uQ/Gxo=
+github.com/zhangyiming748/video2h265mp4 v0.0.6 h1:Wwbvbly7dwXNnYh0SyQ0jd38pBZN1Kjksd86xBsS7mk=
+github.com/zhangyiming748/video2h265mp4 v0.0.6/go.mod h1:SqAAbTPlUR9xvKNacFKyHZx6uc9xNpRc2f0I3uQ/Gxo=
 github.com/zhangyiming748/youtube-dl-bat v0.0.1 h1:6lZoXp5lK8+VDTMCnzUBtSetpanShkN+Le7Qulj/P0M=
 github.com/zhangyiming748/youtube-dl-bat v0.0.1/go.mod h1:RhJhJhNn8Cr4VP8/bxMZCZJNVf4S7gJJ/UHrLqm7994=
 golang.org/x/crypto v0.0.0-20190308221718-c2843e01d9a2/go.mod h1:djNgcEr1/C05ACkg1iLfiJU5Ep61QUkGW8qpdssI0+w=
