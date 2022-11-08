@@ -44,8 +44,6 @@ github.com/stretchr/testify v1.3.0/go.mod h1:M5WIy9Dh21IEIfnGCwXGc5bZfKNJtfHm1UV
 github.com/stretchr/testify v1.7.0/go.mod h1:6Fq8oRcR53rry900zMqJjRRixrwX3KX962/h/Wwjteg=
 github.com/stretchr/testify v1.7.1 h1:5TQK59W5E3v0r2duFAb7P95B6hEeOyEnHRa8MjYSMTY=
 github.com/stretchr/testify v1.7.1/go.mod h1:6Fq8oRcR53rry900zMqJjRRixrwX3KX962/h/Wwjteg=
-github.com/widuu/goini v0.0.0-20180603013956-56a38bd2e09b h1:Fc2RRfaaHdNmSNbN4F7te3jiPuCxqzusksEG1y5BLbE=
-github.com/widuu/goini v0.0.0-20180603013956-56a38bd2e09b/go.mod h1:4q5KUnbuu2CNbSmQru54JCD9Q49oLopMVPEgroiFtFw=
 github.com/xo/terminfo v0.0.0-20210125001918-ca9a967f8778 h1:QldyIu/L63oPpyvQmHgvgickp1Yw510KJOqX7H24mg8=
 github.com/xo/terminfo v0.0.0-20210125001918-ca9a967f8778/go.mod h1:2MuV+tbUrU1zIOPMxZ5EncGwgmMJsa+9ucAQZXxsObs=
 github.com/yeka/zip v0.0.0-20180914125537-d046722c6feb h1:OJYP70YMddlmGq//EPLj8Vw2uJXmrA+cGSPhXTDpn2E=
@@ -54,12 +52,10 @@ github.com/zhangyiming748/AVmerger v0.0.4 h1:49iv7aIG9KRiCD19uNs9wHYaN2cmLZ1M560
 github.com/zhangyiming748/AVmerger v0.0.4/go.mod h1:rk9PhWC4/GWgsWVSbsm4HCmJPayTB2htrlU0iiORLD8=
 github.com/zhangyiming748/amr2mp3 v0.0.2 h1:ntWlQ8u4I8mxYQsd/TGZC8bKWwra92L5+uDWMnZMbRI=
 github.com/zhangyiming748/amr2mp3 v0.0.2/go.mod h1:qEV4pcYk7l9iGJUAlPz0rGGUKle4ew9LMbfaYrKCkVE=
+github.com/zhangyiming748/goini v0.0.1 h1:xavRuMJGQ82dr2168fBLfOHvL60zQPwvcP9OWYhmNjw=
+github.com/zhangyiming748/goini v0.0.1/go.mod h1:StNn7mUADhOtET4WK7QXXxRJgXHa2o6/+j44+E9g9IQ=
 github.com/zhangyiming748/rotateVideo v0.0.3 h1:5cp2ymwjoLYtattzGf82vwDfelPAlav7ADckE886kfI=
 github.com/zhangyiming748/rotateVideo v0.0.3/go.mod h1:o+Esu5SCy4jW1c+1LT1MgnDsoe6/+9jpsPns84e2N7Y=
-github.com/zhangyiming748/video2h265mp4 v0.0.4 h1:OocpBVL1L1wtLF8j+VJBhQ6U3/CX1XEOEaGfjeD222o=
-github.com/zhangyiming748/video2h265mp4 v0.0.4/go.mod h1:SqAAbTPlUR9xvKNacFKyHZx6uc9xNpRc2f0I3uQ/Gxo=
-github.com/zhangyiming748/video2h265mp4 v0.0.5 h1:9YGN3mKX+NOR5cl8MBOTtrZs1GetaXbcc+DOsQz4lx0=
-github.com/zhangyiming748/video2h265mp4 v0.0.5/go.mod h1:SqAAbTPlUR9xvKNacFKyHZx6uc9xNpRc2f0I3uQ/Gxo=
 github.com/zhangyiming748/video2h265mp4 v0.0.6 h1:Wwbvbly7dwXNnYh0SyQ0jd38pBZN1Kjksd86xBsS7mk=
 github.com/zhangyiming748/video2h265mp4 v0.0.6/go.mod h1:SqAAbTPlUR9xvKNacFKyHZx6uc9xNpRc2f0I3uQ/Gxo=
 github.com/zhangyiming748/youtube-dl-bat v0.0.1 h1:6lZoXp5lK8+VDTMCnzUBtSetpanShkN+Le7Qulj/P0M=

@@ -1,7 +1,7 @@
 package conf
 
 import (
-	"github.com/widuu/goini"
+	"github.com/zhangyiming748/goini"
 	"log"
 )
 
@@ -12,13 +12,14 @@ var (
 	conf    *goini.Config
 )
 
-/**
- * 初始化
-	init函数的主要作用：
-		初始化不能采用初始化表达式初始化的变量。
-		程序运行前的注册。
-		实现sync.Once功能。
-		其他
+/*
+*
+  - 初始化
+    init函数的主要作用：
+    初始化不能采用初始化表达式初始化的变量。
+    程序运行前的注册。
+    实现sync.Once功能。
+    其他
 */
 func init() {
 	initConfig()
@@ -27,8 +28,12 @@ func init() {
 func initConfig() {
 	conf = goini.SetConfig(confPath)
 	log.Println(confPath)
-	RunMode = conf.GetValue("runmode", "mode")
-	log.Println("initialization get runMode", RunMode)
+	RunMode, err := conf.GetValue("runmode", "mode")
+	if err != nil {
+		log.Println("not found key: runMode")
+	} else {
+		log.Printf("initialization get runMode:%s\n", RunMode)
+	}
 }
 
 /**
@@ -48,6 +53,9 @@ func GetVal(section, name string) string {
 	if section == "" {
 		section = GetEnv()
 	}
-	val := conf.GetValue(section, name)
+	val, err := conf.GetValue(section, name)
+	if err != nil {
+		return "not found"
+	}
 	return val
 }
